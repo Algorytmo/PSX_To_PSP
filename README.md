@@ -19,7 +19,7 @@ That’s why I tried to designed a tool that performs smart conversions between 
 
 # VMP Conversion Explained
 
-The .VMP file format, used by Sony PSP to emulate PSX memory cards, differs significantly from .SRM and .MCD formats—not only structurally, but cryptographically. One of its distinctive features is a 128-bit header (0x80 bytes) at the beginning of the file, which includes metadata and a cryptographically signed hash used to verify the integrity of the save file.
+The .VMP file format, used by Sony PSP to emulate PSX memory cards, differs significantly from .SRM and .MCD formats not only structurally, but cryptographically. One of its distinctive features is a 128-bit header (0x80 bytes) at the beginning of the file, which includes metadata and a cryptographically signed hash used to verify the integrity of the save file.
 
 The VMP header is created as part of the conversion process using the following steps:
 
@@ -103,4 +103,5 @@ To do this:
 
 ---
 
-# THANKS TO [chrisbrasington] — his code was instrumental in helping me understand the cryptographic functionality used in this project.
+# THANKS TO [chrisbrasington]
+his code was instrumental in helping me understand the cryptographic functionality used in this project.
