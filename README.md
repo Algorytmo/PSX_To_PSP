@@ -75,10 +75,11 @@ To ensure this:
 3. Convert your .VMP file to .MCD or .SRM
 4. Rename the converted file using the exact copied filename  
 
-![](screenshot/original_savedata.jpg)  
-![](screenshot/converted_savedata.jpg)
+![](screenshot/original_savedata.jpg) 
 
 Then place the renamed file into the emulator’s save folder.
+
+![](screenshot/converted_savedata.jpg)
 
 ---
 
