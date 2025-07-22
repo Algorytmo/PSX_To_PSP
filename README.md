@@ -15,6 +15,7 @@ Though these formats contain similar game data, they differ in structure, offset
 
 That’s why I tried to designed a tool that performs smart conversions between these formats, giving users a simple and safe way to preserve their game progress across platforms.
 
+---
 
 # VMP Conversion Explained
 
@@ -46,11 +47,13 @@ In summary:
 - Offset 0x34–0x7F	--> (extra / padding / reserved)
 - Offset 0x80 --> Real savedata (our payload)
 
+---
 
 # MCD/SRM Conversion Explained
 
 Converting to .MCD or .SRM is straightforward, as these formats consist of raw save data without additional headers. To perform the conversion, we simply remove the first 0x80 bytes (128 in decimal) from the original VMP file and save the remaining binary content using the appropriate extension: .MCD or .SRM.
 
+---
 
 # HOW TO USE
 
@@ -59,11 +62,39 @@ Converting to .MCD or .SRM is straightforward, as these formats consist of raw s
 - Drag and drop .VMP, .MCD or .SRM savedata and press enter
 - You'll find the new created file inside the folder
 
-REMEMBER THIS:
+---
+
+## IMPORTANT:
 
 When working with .MCD or .SRM files, it's important to match the exact filename expected by the emulator—otherwise the save won't be recognized.
-To ensure this, I recommend starting the game normally within the emulator and creating a fresh save file.
 
+To ensure this:
 
+1. Start the game in your emulator and create a new save file  
+2. Locate the freshly created file and copy its filename  
+3. Convert your .VMP file to .MCD or .SRM
+4. Rename the converted file using the exact copied filename  
 
-Then, locate the newly created file, copy its name, convert your .VMP file to .MCD or .SRM, and rename the converted file using that exact filename.
+![](screenshot/original_savedata.jpg)  
+![](screenshot/converted_savedata.jpg)
+
+Then place the renamed file into the emulator’s save folder.
+
+---
+
+When working with .VMP, the filename will be automatically generated (SCEVMC0.VMP).  
+However, you must create the correct savedata folder inside the PSP system manually.
+
+To do this:
+
+1. Start a PSX game normally on PSP to let it create a new save  
+2. Locate the folder where SCEVMC0.VMP is stored  
+3. Replace that file with the one you converted  
+
+![](screenshot/vmp_savedata.jpg)
+
+---
+
+#TO DO
+
+- Add logging system
