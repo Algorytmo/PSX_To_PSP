@@ -97,6 +97,10 @@ To do this:
 
 ---
 
-#TO DO
+# TO DO
 
 - Add logging system
+
+---
+
+# THANKS TO [chrisbrasington] — his code was instrumental in helping me understand the cryptographic functionality used in this project.
