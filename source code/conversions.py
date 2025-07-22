@@ -69,14 +69,14 @@ def srm_to_mcd(input_file, countrycode_offset, productcode_offset, saveinfo_offs
     file_data = savedata.read_savedata(input_file, countrycode_offset, productcode_offset, saveinfo_offset)
     out_file = os.path.join(output_folder, f'{file_data["TITLE"]}.srm')
     dst = os.path.splitext(out_file)[0] + ".mcd"
-    shutil.copy(out_file, dst)
+    shutil.copy(input_file, dst)
 
 
 def mcd_to_srm(input_file, countrycode_offset, productcode_offset, saveinfo_offset):
     file_data = savedata.read_savedata(input_file, countrycode_offset, productcode_offset, saveinfo_offset)
     out_file = os.path.join(output_folder, f'{file_data["TITLE"]}.mcd')
     dst = os.path.splitext(out_file)[0] + ".srm"
-    shutil.copy(out_file, dst)
+    shutil.copy(input_file, dst)
 
 
 def mcd_srm_to_vmp(input_file, key, iv, vmp_sz, pmv_magic, mcd_offset, hash_offset, seed_offset):
