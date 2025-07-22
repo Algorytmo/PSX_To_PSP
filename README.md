@@ -71,15 +71,16 @@ When working with .MCD or .SRM files, it's important to match the exact filename
 To ensure this:
 
 1. Start the game in your emulator and create a new save file  
-2. Locate the freshly created file and copy its filename  
-3. Convert your .VMP file to .MCD or .SRM
-4. Rename the converted file using the exact copied filename  
+2. Locate the freshly created file and copy its filename
 
 ![](screenshot/original_savedata.jpg) 
 
-Then place the renamed file into the emulator’s save folder.
+3. Convert your .VMP file to .MCD or .SRM
+4. Rename the converted file using the exact copied filename
 
 ![](screenshot/converted_savedata.jpg)
+
+5. Then place the renamed file into the emulator’s save folder.
 
 ---
 
